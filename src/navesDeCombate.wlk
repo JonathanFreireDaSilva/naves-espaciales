@@ -3,7 +3,7 @@ import navesEspaciales.*
 class NavesDeCombate inherits NaveEspacial {
     var mensajes = []
 	var visible = true
-	var desplegado = false
+	var desplegado = true
 	
 	constructor (cantidad){
 	   _combustible = _combustible + cantidad	
@@ -33,7 +33,7 @@ class NavesDeCombate inherits NaveEspacial {
 		return desplegado
 	}	
 	
-	method 	emitirMensaje(_mensaje){
+	method emitirMensaje(_mensaje){
 		mensajes.add(_mensaje)
 	}
 		
@@ -79,6 +79,10 @@ class NavesDeCombate inherits NaveEspacial {
         
      override method recibirAmenaza(){
      	super()
+     }
+     
+     override method estaTranquila(){
+     	return super() && !self.misilesDesplegados()
      }
 	
 }

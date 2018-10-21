@@ -71,7 +71,7 @@ test "recibir amenaza baliza"{
 
 test "recibir amenaza pasajeros"{
 	np1.recibirAmenaza()
-	assert.equals(12000, np1.velocidad())
+	assert.equals(24000, np1.velocidad())
 	assert.equals(4800, np1.racionComida())
 	assert.equals(4600, np1.racionBebida())
 }

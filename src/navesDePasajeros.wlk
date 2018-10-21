@@ -52,12 +52,12 @@ constructor (pas){
      
      override method escapar(){
      	// revisarr
-        self.velocidad()
+        self.velocidad()*2
          
      }
         
      override method recibirAmenaza(){
-     	super()
+     super()
      }
 	}
 

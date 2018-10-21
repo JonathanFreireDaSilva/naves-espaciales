@@ -34,5 +34,9 @@ class NavesBaliza inherits NaveEspacial {
      override method recibirAmenaza(){
      	super()
      }
+     
+     override method estaTranquila(){
+     	return super() && _baliza!="rojo"	
+     }
 }
 

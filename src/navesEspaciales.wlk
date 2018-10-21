@@ -3,10 +3,10 @@ import navesDePasajeros.*
 import navesDeCombate.*
 
 class NaveEspacial {
-
+  var estaTranquila
 	var _velocidad = 0
 	var _direccion = 0
-	var property _combustible = 100
+	var  _combustible = 100
 
 	method acelerar(cuanto) {
 		_velocidad = _velocidad + cuanto
@@ -57,9 +57,10 @@ class NaveEspacial {
     }
     
     method prepararViaje(){
-    	self._combustible(30000)
+    	self.cargarCombustible(30000)
     	self.acelerar(5000)
     }
+    
 
     method avisar()
     
@@ -69,6 +70,12 @@ class NaveEspacial {
     self.avisar()
     self.escapar()
     }
+    
+    method estaTranquila(){
+    	return self.combustible() >=4000 && self.velocidad() >=12000
+    }
+    
+    
     
      
 }
