@@ -61,12 +61,22 @@ class NavesDeCombate inherits NaveEspacial {
     	self.ponerseVisible()
     	self.replegarMisiles()
     	self.acelerar(15000)
+    super()
     	self.emitirMensaje("Saliendo en mision")
-    	super()
-        
-        
-	
+
     }
     
+    override method avisar(){
+    	
+    }
+     
+     override method escapar(){
+     	
+     }
+        
+     override method recibirAmenaza(){
+     	
+     }
+	
 }
 

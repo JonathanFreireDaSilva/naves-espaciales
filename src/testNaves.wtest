@@ -38,25 +38,37 @@ test "nave combate inicial"{
 
 }
 
-test "nave de pazsajeros"{
+test "nave de pasajeros"{
 	
 	assert.equals(200, np1.pasajeros())
 }
 
-/*test "preparar nave combate"{
+test "preparar nave combate"{
 	
   nc1.prepararViaje()
+  nc1.cargarCombustible(10000)
   assert.equals(40000, nc1.combustible())
+  nc1.acelerar(20000)
   assert.equals(40000, nc1.velocidad())
-  assert.equals("Saliendo en mision", nc1.mensajes())
+  assert.equals(["Saliendo en mision"], nc1.mensajesEmitidos())
+
+
+
 }
-		test "preparar nave pasajero"{
+test "preparar nave pasajero"{
 	
   np1.prepararViaje()
+  np1.cargarCombustible(10000)
   assert.equals(40000, np1.combustible())
-   assert.equals(5800, np1.raciones())
+   // assert.equals(5800, np1.raciones())
    
-}*/
+}
+
+test "recibir amenaza baliza"{
+	
+	nb1.recibirAmenaza()
+	assert.equals(10,nb1.direccion())
+}
 	
 	
 	

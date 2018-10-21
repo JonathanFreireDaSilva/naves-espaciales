@@ -40,7 +40,21 @@ constructor (pas){
 		self.acercarseUnPocoAlSol()
 		self.acercarseUnPocoAlSol()
 		self.acercarseUnPocoAlSol()
+		super()
 		
 	}
+	
+	
+	    override method avisar(){
+    	
+    }
+     
+     override method escapar(){
+     	
+     }
+        
+     override method recibirAmenaza(){
+     	
+     }
 	}
 

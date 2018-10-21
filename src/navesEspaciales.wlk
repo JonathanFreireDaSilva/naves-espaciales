@@ -25,6 +25,10 @@ class NaveEspacial {
 	method escaparDelSol() {
 		_direccion = -10
 	}
+	
+	method direccion(){
+		return _direccion
+	}
 
 	method alejarseUnPocoDelSol() {
 		_direccion = _direccion - 1
@@ -45,17 +49,25 @@ class NaveEspacial {
     }
     	
     method combustible(){
-    	return _combustible
+   	 	return _combustible
     }
     
     method prepararViaje(){
     	self._combustible(30000)
     	self.acelerar(5000)
-    	
     }
 
+    method avisar(){
+    	
+    }
+    
+    method escapar(){
+    	
+    }
+  
     method recibirAmenaza(){
-      
+    self.avisar()
+    self.escapar()
     }
     
      
