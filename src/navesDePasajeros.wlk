@@ -14,7 +14,7 @@ constructor (pas){
 		_racionesBebida = _racionesBebida + cuanto
 	}
 
-	method racionBebidas() {
+	method racionBebida() {
 		return _racionesBebida
 	}
 
@@ -46,15 +46,18 @@ constructor (pas){
 	
 	
 	    override method avisar(){
-    	
+              	    self.racionBebida()- _pasajeros
+              	    self.racionComida()- (_pasajeros*2)
     }
      
      override method escapar(){
-     	
+     	// revisarr
+        self.velocidad()
+         
      }
         
      override method recibirAmenaza(){
-     	
+     	super()
      }
 	}
 

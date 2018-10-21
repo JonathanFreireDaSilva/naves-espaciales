@@ -1,3 +1,7 @@
+import navesbaliza.*
+import navesDePasajeros.*
+import navesDeCombate.*
+
 class NaveEspacial {
 
 	var _velocidad = 0
@@ -57,14 +61,10 @@ class NaveEspacial {
     	self.acelerar(5000)
     }
 
-    method avisar(){
-    	
-    }
+    method avisar()
     
-    method escapar(){
+    method escapar()
     	
-    }
-  
     method recibirAmenaza(){
     self.avisar()
     self.escapar()

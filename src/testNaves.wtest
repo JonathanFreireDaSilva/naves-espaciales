@@ -16,7 +16,6 @@ describe "naves"{
 	np1.cargarBebida(5000)
 	np1.acelerar(12000)
 	
-	
 }
 test "nave baliza incial"{
 	
@@ -39,23 +38,21 @@ test "nave combate inicial"{
 }
 
 test "nave de pasajeros"{
-	
 	assert.equals(200, np1.pasajeros())
+	
 }
 
 test "preparar nave combate"{
-	
   nc1.prepararViaje()
   nc1.cargarCombustible(10000)
+  // revisar
   assert.equals(40000, nc1.combustible())
   nc1.acelerar(20000)
   assert.equals(40000, nc1.velocidad())
   assert.equals(["Saliendo en mision"], nc1.mensajesEmitidos())
-
-
-
 }
-test "preparar nave pasajero"{
+
+test "preparar nave pasajeros"{
 	
   np1.prepararViaje()
   np1.cargarCombustible(10000)
@@ -68,9 +65,22 @@ test "recibir amenaza baliza"{
 	
 	nb1.recibirAmenaza()
 	assert.equals(10,nb1.direccion())
+	assert.equals("rojo", nb1._baliza())
+	
+}
+
+test "recibir amenaza pasajeros"{
+	np1.recibirAmenaza()
+	assert.equals(12000, np1.velocidad())
+	assert.equals(4800, np1.racionComida())
+	assert.equals(4600, np1.racionBebida())
 }
 	
-	
+	test "amenaza combare"{
+		nc1.recibirAmenaza()
+		assert.equals(20, nc1.direccion())
+		assert.equals(["Amenaza recibida"], nc1.mensajesEmitidos())
+	}
 	
 	
 	

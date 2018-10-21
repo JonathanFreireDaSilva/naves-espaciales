@@ -67,15 +67,18 @@ class NavesDeCombate inherits NaveEspacial {
     }
     
     override method avisar(){
-    	
+     
+    	  self.emitirMensaje("Amenaza recibida")
+    	 
     }
      
      override method escapar(){
-     	
+     	 self.acercarseUnPocoAlSol()
+    	      self.acercarseUnPocoAlSol()
      }
         
      override method recibirAmenaza(){
-     	
+     	super()
      }
 	
 }
