@@ -1,14 +1,25 @@
 import navesEspaciales.*
 
-class NavesBaliza inherits NaveEspacial{
-	
+class NavesBaliza inherits NaveEspacial {
+
 	var _baliza
 	
-	method cambiarColorDeBaliza(colorNuevo){
+	constructor (color){
+		_baliza = color
+	}
+
+	method cambiarColorDeBaliza(colorNuevo) {
 		_baliza = colorNuevo
-	}	
+	}
+
+	method _baliza() {
+		return _baliza
+	}
 	
-		method _baliza(){
-			return _baliza
-		}
+	override method prepararViaje(){
+		self.cambiarColorDeBaliza("verde")
+		self.irHaciaElSol()
+	}
+
 }
+

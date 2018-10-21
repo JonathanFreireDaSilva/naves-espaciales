@@ -1,0 +1,67 @@
+import navesEspaciales.*
+import navesbaliza.*
+import navesDePasajeros.*
+import navesDeCombate.*
+
+
+describe "naves"{
+	
+	const np1=new NavesDePasajeros(200)
+	const nc1=new NavesDeCombate(10000)
+	const nb1=new NavesBaliza("naranja")
+	
+  fixture {
+	
+	np1.cargarComida(5000)
+	np1.cargarBebida(5000)
+	np1.acelerar(12000)
+	
+	
+}
+test "nave baliza incial"{
+	
+	nb1.cambiarColorDeBaliza("rojo")
+	assert.equals("rojo",nb1._baliza())  
+}
+
+test "nave combate inicial"{
+	
+	nc1.desplegarMisiles()
+	nc1.emitirMensaje("Alerta")
+	nc1.emitirMensaje("Stop")
+	
+	
+	assert.that(nc1.misilesDesplegados())
+	assert.equals(["Alerta","Stop"],nc1.mensajesEmitidos())
+	assert.equals("Alerta",nc1.primerMensajeEmitido())
+	assert.equals("Stop",nc1.ultimoMensajeEmitido())
+
+}
+
+test "nave de pazsajeros"{
+	
+	assert.equals(200, np1.pasajeros())
+}
+
+/*test "preparar nave combate"{
+	
+  nc1.prepararViaje()
+  assert.equals(40000, nc1.combustible())
+  assert.equals(40000, nc1.velocidad())
+  assert.equals("Saliendo en mision", nc1.mensajes())
+}
+		test "preparar nave pasajero"{
+	
+  np1.prepararViaje()
+  assert.equals(40000, np1.combustible())
+   assert.equals(5800, np1.raciones())
+   
+}*/
+	
+	
+	
+	
+	
+	}
+	
+	
