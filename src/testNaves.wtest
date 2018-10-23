@@ -55,7 +55,7 @@ test "preparar nave pasajeros"{
 	
   np1.prepararViaje()
   
-  assert.equals(40000, np1.combustible())
+  assert.equals(200, np1.pasajeros())
    // assert.equals(5800, np1.raciones())
    
 }
@@ -70,7 +70,7 @@ test "recibir amenaza baliza"{
 
 test "recibir amenaza pasajeros"{
 	np1.recibirAmenaza()
-	assert.equals(24000, np1.velocidad())
+	assert.equals(23800, np1.velocidad())
 	assert.equals(4800, np1.racionComida())
 	assert.equals(4600, np1.racionBebida())
 }
