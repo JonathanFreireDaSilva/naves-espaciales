@@ -6,8 +6,9 @@ class NavesDePasajeros inherits NaveEspacial {
 	var _racionesComida = 0
 	var _racionesBebida = 0
 
-constructor (pas){
+constructor (pas,velo){
 	_pasajeros = pas
+	_combustible= velo
 }
 
 	method cargarBebida(cuanto) {

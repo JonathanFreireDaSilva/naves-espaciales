@@ -4,8 +4,9 @@ class NavesBaliza inherits NaveEspacial {
 
 	var _baliza
 	
-	constructor (color){
+	constructor (color,ca){
 		_baliza = color
+		_combustible = ca
 	}
 
 	method cambiarColorDeBaliza(colorNuevo) {

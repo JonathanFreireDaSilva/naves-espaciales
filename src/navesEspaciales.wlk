@@ -6,7 +6,7 @@ class NaveEspacial {
   var estaTranquila
 	var _velocidad = 0
 	var _direccion = 0
-	var  _combustible = 100
+	var  _combustible = 0
 
 	method acelerar(cuanto) {
 		_velocidad = _velocidad + cuanto

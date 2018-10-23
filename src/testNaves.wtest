@@ -6,9 +6,9 @@ import navesDeCombate.*
 
 describe "naves"{
 	
-	const np1=new NavesDePasajeros(200)
+	const np1=new NavesDePasajeros(200,10000)
 	const nc1=new NavesDeCombate(10000)
-	const nb1=new NavesBaliza("naranja")
+	const nb1=new NavesBaliza("naranja",10000)
 	
   fixture {
 	
@@ -44,18 +44,17 @@ test "nave de pasajeros"{
 
 test "preparar nave combate"{
   nc1.prepararViaje()
-  nc1.cargarCombustible(10000)
+  
   // revisar
   assert.equals(40000, nc1.combustible())
-  nc1.acelerar(20000)
-  assert.equals(40000, nc1.velocidad())
+  assert.equals(20000, nc1.velocidad())
   assert.equals(["Saliendo en mision"], nc1.mensajesEmitidos())
 }
 
 test "preparar nave pasajeros"{
 	
   np1.prepararViaje()
-  np1.cargarCombustible(10000)
+  
   assert.equals(40000, np1.combustible())
    // assert.equals(5800, np1.raciones())
    
